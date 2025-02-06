@@ -15,8 +15,9 @@ body {
 }
 .header h1 {
     font-size: 3rem;
-    background: linear-gradient(to right, #79e6dc, #9b59b6); /* Aure to Purple Gradient */
+    background: linear-gradient(to right, #79e6dc, #9b59b6);
     -webkit-background-clip: text; /* Clips the background to the text */
+    background-clip: text; /* Standard property for compatibility */
     color: transparent;
     letter-spacing: 2px;
     font-weight: bold;
@@ -82,12 +83,12 @@ body {
 
 
 /* Start Button */
-.startbutton {
+.button {
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-#startbutton {
+#startButton {
     background-color: #2d333b;
     color: #c9d1d9;
     border: 1px solid #30363d;
@@ -98,12 +99,12 @@ body {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-#startbutton:hover {
+#startButton:hover {
     background-color: #444c56;
     transform: scale(1.05);
 }
 
-#startbutton:active {
+#startButton:active {
     background-color: #6e7681;
     transform: scale(0.98);
 }
