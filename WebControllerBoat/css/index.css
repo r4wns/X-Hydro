@@ -7,84 +7,61 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5vw; /* Use vw for padding to adapt to different screen sizes */
+    padding: 5vw;
     margin: 0;
     scroll-behavior: smooth;
     width: 100%;
-    box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+    box-sizing: border-box;
 }
 
-/* Header */
 .header {
     display: flex;
-    text-align: center;
-    height: 20vh; /* Height relative to viewport */
-    width: 100%;
-    max-width: 1200px; /* Prevent the header from stretching too much on large screens */
     justify-content: center;
     align-items: center;
+    width: 100%;
+    max-width: 1800px;
+    height: 20vh; /* Consider using min-height if content might expand */
 }
 
 .header h1 {
-    font-size: 8vw; /* Makes the font size responsive to viewport width */
-    background: linear-gradient(to right, #79e6dc, #9b59b6); /* Aqua to Purple Gradient */
-    background-size: 200% 200%; /* Double the size of the gradient for smooth animation */
-    -webkit-background-clip: text; /* Clips the background to the text */
-    background-clip: text; /* Standard property for compatibility */
-    color: transparent;
-    letter-spacing: 2px;
+    font-size: 8vw;
     font-weight: 800;
-    animation: gradientFlow 5s ease-in-out infinite; /* Adds the animation */
+    letter-spacing: 2px;
+    background: linear-gradient(to right, #79e6dc, #9b59b6);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientFlow 5s ease-in-out infinite;
 }
 
 @keyframes gradientFlow {
-    0% {
-        background-position: 0% 0%;
-    }
-    10% {
-        background-position: 20% 30%;
-    }
-    20% {
-        background-position: 50% 50%;
-    }
-    40% {
-        background-position: 70% 90%;
-    }
-    60% {
-        background-position: 10% 70%;
-    }
-    80% {
-        background-position: 90% 30%;
-    }
-    100% {
-        background-position: 0% 0%;
-    }
+    0% { background-position: 0% 0%; }
+    25% { background-position: 50% 50%; } /* Simplified keyframes */
+    50% { background-position: 100% 100%; }
+    75% { background-position: 50% 50%; }
+    100% { background-position: 0% 0%; }
 }
 
 .description {
-    width: 90%; /* Makes the description text responsive */
-    max-width: 1000px; /* Prevents it from becoming too wide on large screens */
+    width: 90%;
+    max-width: 1000px;
     text-align: center;
-    margin: 2vw;
-    display: flex;
-    justify-content: center;
+    margin: 2vw 0; /* Removed unnecessary display:flex */
 }
 
-/* Start Button */
 #startButton {
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     background-color: #2d333b;
     color: #c9d1d9;
     border: 1px solid #30363d;
-    border-radius: 6px;
-    font-size: 1.5vw; /* Font size adjusts based on viewport width */
+    border-radius: 10px; /* Consistent radius */
+    font-size: 1.5vw;
     font-weight: 500;
-    padding: 1vw 2vw; /* Padding adjusts based on viewport */
+    padding: 1vw 2vw;
     cursor: pointer;
     transition: background-color 0.4s ease, transform 0.2s ease;
-    border-radius: 10px;
-    margin: 1vh 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Moved box-shadow here */
+    margin: 1vh 0; /* Consistent margin */
 }
 
 #startButton:hover {
