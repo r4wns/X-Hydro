@@ -9,15 +9,24 @@
     <script src="js/index.js" defer></script>
 </head>
 <body>
+    <div class="language-dropdown">
+        <button id="languageButton">
+            <img id="languageIcon" src="img/language_icon.png" alt="Select Language" width="30px">
+        </button>
+        <div id="languageDropdown">
+            <a href="#" id="enButton" class="dropdown-item">English</a>
+            <a href="#" id="uaButton" class="dropdown-item">Ukrainian</a>
+        </div>
+    </div>
     <div class="header">
-        <h1>X-HYDRO</h1>
+        <h1 id="title">X-HYDRO</h1>
     </div>
     <div class="description">
-        <p class="line">X-HYDRO is a school project based on a realization on a Wi-Fi Controlled Boat.</p>
-        <p class="line">It was created by the X-Hydro Development Team.</p>
+        <p class="line" id="description1">X-HYDRO is a school project based on a realization on a Wi-Fi Controlled Boat.</p>
+        <p class="line" id="description2">It was created by the X-Hydro Development Team.</p>
     </div>       
     <div class="button">
-        <button id="startButton">Go to Controller</button>
+        <button id="startButton">Launch the Controller</button>
     </div>
 </body>
 </html>
