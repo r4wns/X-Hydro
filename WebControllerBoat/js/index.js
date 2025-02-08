@@ -27,20 +27,20 @@ document.addEventListener("DOMContentLoaded", function () {
     // Event listener for the language button to toggle the dropdown
     document.getElementById("languageButton").addEventListener("click", function () {
         const dropdown = document.getElementById("languageDropdown");
-        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        dropdown.classList.toggle("show");
     });
 
     // Event listeners for selecting a language
     document.getElementById("enButton").addEventListener("click", function () {
         currentLanguage = 'en';
         setLanguage(currentLanguage);
-        document.getElementById("languageDropdown").style.display = "none"; // Close dropdown
+        document.getElementById("languageDropdown").classList.remove("show"); // Close dropdown
     });
 
     document.getElementById("uaButton").addEventListener("click", function () {
         currentLanguage = 'ua';
         setLanguage(currentLanguage);
-        document.getElementById("languageDropdown").style.display = "none"; // Close dropdown
+        document.getElementById("languageDropdown").classList.remove("show"); // Close dropdown
     });
 
     document.getElementById("startButton").addEventListener("click", function () {
@@ -50,3 +50,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // Set initial language
     setLanguage(currentLanguage);
 });
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+    if (!event.target.matches('#languageButton') && !event.target.matches('#languageIcon')) {
+        const dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+            const openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
+    }
+};
