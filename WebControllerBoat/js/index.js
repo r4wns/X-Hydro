@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const translations = {
         en: {
             title: "X-HYDRO",
-            description1: "X-HYDRO is a school project based on a realization on a Wi-Fi Controlled Boat.",
+            description1: "X-HYDRO is a school project based on a realization of a Wi-Fi Controlled Boat.",
             description2: "It was created by the X-Hydro Development Team.",
             startButton: "Launch the Controller"
         },
